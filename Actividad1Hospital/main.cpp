@@ -15,10 +15,10 @@
 
 typedef void (*opcion_t) (int);
 
-void agregar(int); //void append();
-void buscar(int); //void buscar();
-void listaPacientes(int); //void listaPacientes();
-void alta(int); //void alta();
+void agregar(int); 
+void buscar(int); 
+void listaPacientes(int); 
+void alta(int); 
 void vaciarMemoria(int);
 
 char fname[]={"mydb.dat"};
@@ -32,12 +32,11 @@ int main(int argc, const char * argv[]) {
     opcion_t * menu = (opcion_t *) malloc( N * sizeof(opcion_t));
     
     *menu = agregar;
-    *(menu+1) = buscar;//buscar por nombre
+    *(menu+1) = buscar;
     *(menu+2) = listaPacientes;
     *(menu+3) = alta;
     *(menu+4) = vaciarMemoria;
-    
-	//*(menu+4) = salir;
+ 
     
     
     printf("--- Opciones --- \n1-AGREGAR\n2-BUSCAR\n3-LISTA DE PACIENTES\n4-ALTA\n5-VACIAR MEMORIA\nEscoge tu opcion: ");
@@ -210,7 +209,7 @@ struct paciente p;
 char nombre[30];
 char val[20];
 
-printf("\nQuieres una copía de esta lista ?  (Y/N):");
+printf("\nQuieres una copÃ­a de esta lista ?  (Y/N):");
 scanf("%s",val);
 
 if(strcmp(val,"Y")==0)
